@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English With Mom - Học tiếng Anh cùng mẹ</title>
+  <meta name="description" content="Cùng bé học tiếng Anh mỗi ngày qua Phonics, từ vựng, truyện kể và trò chơi.">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f9ff;
+      color: #26334a;
+      line-height: 1.6;
+    }
+
+    header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 12px #0000000a;
+    }
+
+    .logo {
+      color: #5268d8;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #35415a;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #5268d8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #e8efff, #fff0e9);
+    }
+
+    .hero h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      color: #4059c5;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 25px;
+      font-size: 18px;
+    }
+
+    .main-button {
+      display: inline-block;
+      background: #5268d8;
+      color: white;
+      padding: 13px 27px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 55px 7%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 30px;
+      color: #4059c5;
+      margin-bottom: 12px;
+    }
+
+    .intro {
+      color: #68758a;
+      margin-bottom: 30px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 28px 20px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px #33446610;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .emoji {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #4059c5;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #68758a;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      color: #5268d8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .about {
+      background: #edf1ff;
+    }
+
+    footer {
+      background: #354575;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      .hero {
+        padding: 55px 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">🌷 English With Mom</div>
+    <nav>
+      <a href="#home">Trang chủ</a>
+      <a href="#phonics">Phonics</a>
+      <a href="#vocabulary">Từ vựng</a>
+      <a href="#listening">Luyện nghe</a>
+      <a href="#stories">Truyện kể</a>
+      <a href="#games">Trò chơi</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Let's Learn English Together!</h1>
+    <p>
+      Cùng mẹ khám phá tiếng Anh mỗi ngày
+      qua những bài học nhỏ, hình ảnh sinh động
+      và trò chơi thú vị.
+    </p>
+    <a class="main-button" href="#courses">Khám phá bài học</a>
+  </section>
+
+  <section class="section" id="courses">
+    <h2>🌈 Góc học tập của bé</h2>
+    <p class="intro">
+      Mỗi ngày một chút, bé tự tin hơn với tiếng Anh!
+    </p>
+
+    <div class="cards">
+
+      <div class="card" id="phonics">
+        <div class="emoji">🔤</div>
+        <h3>Phonics</h3>
+        <p>Học âm, chữ cái và cách ghép vần qua 5 cấp độ.</p>
+        <a href="https://tramphonics.pages.dev" target="_blank" rel="noopener">
+          Khám phá Phonics →
+        </a>
+      </div>
+
+      <div class="card" id="vocabulary">
+        <div class="emoji">🧸</div>
+        <h3>Vocabulary</h3>
+        <p>Khám phá từ vựng theo chủ đề quen thuộc.</p>
+        <a href="#contact">Sắp ra mắt →</a>
+      </div>
+
+      <div class="card" id="listening">
+        <div class="emoji">🎧</div>
+        <h3>Listening</h3>
+        <p>Luyện nghe tiếng Anh qua âm thanh và video.</p>
+        <a href="#contact">Sắp ra mắt →</a>
+      </div>
+
+      <div class="card" id="stories">
+        <div class="emoji">📚</div>
+        <h3>Stories</h3>
+        <p>Những câu chuyện tiếng Anh thú vị dành cho bé.</p>
+        <a href="#contact">Sắp ra mắt →</a>
+      </div>
+
+      <div class="card" id="worksheets">
+        <div class="emoji">✏️</div>
+        <h3>Worksheets</h3>
+        <p>Bài tập thực hành giúp bé ghi nhớ kiến thức.</p>
+        <a href="#contact">Sắp ra mắt →</a>
+      </div>
+
+      <div class="card" id="games">
+        <div class="emoji">🎮</div>
+        <h3>Games</h3>
+        <p>Vừa học vừa chơi với những trò chơi tiếng Anh.</p>
+        <a href="#contact">Sắp ra mắt →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section about" id="about">
+    <h2>💗 Học cùng mẹ mỗi ngày</h2>
+    <p>
+      English With Mom là góc học tập giúp mẹ và bé
+      cùng khám phá tiếng Anh một cách vui vẻ,
+      nhẹ nhàng và tự nhiên.
+    </p>
+  </section>
+
+  <footer id="contact">
+    <p>🌷 English With Mom</p>
+    <p>Learn a little every day. Grow together!</p>
+    <p>© 2026 English With Mom</p>
+  </footer>
+
+</body>
+</html>
