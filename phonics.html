@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Góc học Phonics cùng English With Mom – 5 Level, 40 Unit dành cho bé.">
+  <title>Phonics | English With Mom</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Arial,sans-serif;background:#f7f9ff;color:#26334a;line-height:1.6}
+    header{background:#fff;padding:17px 7%;display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;box-shadow:0 2px 12px #0000000a}
+    .logo{font-size:22px;font-weight:bold;color:#5268d8;text-decoration:none}
+    nav{display:flex;gap:18px;flex-wrap:wrap} nav a{color:#35415a;text-decoration:none;font-weight:600}
+    .hero{text-align:center;padding:55px 18px;background:linear-gradient(135deg,#e8efff,#fff0e9)}
+    .hero h1{font-size:clamp(30px,5vw,44px);color:#4059c5;margin-bottom:10px}
+    .hero p{max-width:680px;margin:auto;color:#536078}
+    .wrap{max-width:1100px;margin:auto;padding:38px 18px 60px}
+    .note{text-align:center;color:#68758a;margin-bottom:30px}
+    .level{background:#fff;border-radius:20px;padding:24px;margin:22px 0;box-shadow:0 5px 20px #33446610}
+    .level-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .level h2{color:#4059c5;font-size:23px}
+    .level-head span{font-size:13px;color:#68758a;background:#f0f3ff;padding:6px 12px;border-radius:20px}
+    .units{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .unit{border:1px solid #e5eaff;background:#f9faff;border-radius:13px;padding:15px 10px;text-align:center}
+    .unit strong{display:block;color:#4059c5;margin-bottom:4px}
+    .unit small{color:#8993a6;font-size:12px}
+    .back{text-align:center;margin-top:35px}
+    .back a{display:inline-block;background:#5268d8;color:#fff;text-decoration:none;padding:12px 22px;border-radius:25px;font-weight:bold}
+    footer{text-align:center;background:#354575;color:#fff;padding:24px 15px}
+    footer a{color:#fff}
+    @media(max-width:650px){header{justify-content:center}nav{justify-content:center;gap:12px}nav a{font-size:14px}.units{grid-template-columns:repeat(2,minmax(0,1fr))}.level{padding:18px}}
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="index.html">🌷 English With Mom</a>
+    <nav><a href="index.html">Trang chủ</a><a href="phonics.html">Phonics</a></nav>
+  </header>
+  <section class="hero">
+    <h1>🔤 Phonics – Học âm tiếng Anh</h1>
+    <p>Bé làm quen với âm và chữ cái, luyện nghe – nhận biết – đọc từng bước qua 5 cấp độ học tập.</p>
+  </section>
+  <main class="wrap">
+    <p class="note">Chọn Level để xem các Unit. Nội dung bài học sẽ được bổ sung dần trong những bước tiếp theo.</p>
+    <div id="levels"></div>
+    <div class="back"><a href="index.html">← Quay về trang chủ</a></div>
+  </main>
+  <footer>
+    <p>🌷 English With Mom</p>
+    <p>Learn a little every day. Grow together!</p>
+    <p><a href="https://www.facebook.com/nguyen.thi.huong.giang.9930/" target="_blank" rel="noopener">Theo dõi Facebook</a></p>
+    <p>© 2026 English With Mom</p>
+  </footer>
+  <script>
+    const root = document.getElementById('levels');
+    for (let level = 1; level <= 5; level++) {
+      const section = document.createElement('section');
+      section.className = 'level';
+      const units = Array.from({length: 8}, (_, i) =>
+        '<div class="unit"><strong>Unit ' + (i + 1) + '</strong><small>Nội dung đang chuẩn bị</small></div>'
+      ).join('');
+      section.innerHTML = '<div class="level-head"><h2>🌟 Level ' + level + '</h2><span>8 Units</span></div><div class="units">' + units + '</div>';
+      root.appendChild(section);
+    }
+  </script>
+</body>
+</html>
