@@ -41,7 +41,7 @@
     <p>Bé làm quen với âm và chữ cái, luyện nghe – nhận biết – đọc từng bước qua 5 cấp độ học tập.</p>
   </section>
   <section id="journey" style="text-align:center;padding:34px 18px;background:#fff;">\n    <h2 style="color:#4059c5;margin-bottom:8px;">💗 Hành trình của mẹ và bé</h2>\n    <p style="max-width:720px;margin:auto;color:#536078;">Ghi lại hành trình mẹ và bé cùng học hỏi, khám phá tiếng Anh mỗi ngày – từng bước nhỏ, vui vẻ và không áp lực.</p>\n  </section>\n  <main class="wrap">
-    <p class="note">Chọn Level để xem các Unit. Nội dung bài học sẽ được bổ sung dần trong những bước tiếp theo.</p>
+    <p class="note">Chọn Level → Unit → chữ hoặc âm. Nghe, nhìn tranh rồi đọc cùng con. Mỗi Unit có phần Letters &amp; Sounds, Story và Review.</p>
     <div id="levels"></div>
     <div class="back"><a href="index.html">← Quay về trang chủ</a></div>
   </main>
@@ -52,18 +52,32 @@
     <p>© 2026 English With Mom</p><p style="font-size:13px;opacity:.9;margin-top:10px">Nguồn học liệu: tài liệu được chia sẻ bởi cộng đồng phụ huynh và các nguồn học tập; sử dụng theo sự cho phép của bên chia sẻ.</p>
   </footer>
   <script>
+    const levelNames = [
+      'The Alphabet — Bảng chữ cái',
+      'Short Vowels — Nguyên âm ngắn',
+      'Long Vowels — Nguyên âm dài',
+      'Consonant Blends — Cụm phụ âm',
+      'Letter Combinations — Tổ hợp chữ cái'
+    ];
+    const unitLetters = [
+      ['Aa · Bb · Cc','Dd · Ee · Ff','Gg · Hh · Ii','Jj · Kk · Ll','Mm · Nn · Oo','Pp · Qq · Rr','Ss · Tt · Uu · Vv','Ww · Xx · Yy · Zz']
+    ];
     const root = document.getElementById('levels');
     for (let level = 1; level <= 5; level++) {
       const section = document.createElement('section');
       section.className = 'level';
-      const units = Array.from({length: 8}, (_, i) =>
-        level === 1 && i === 0
-          ? '<a class="unit" href="unit1-1.html" style="display:block;text-decoration:none"><strong>Unit 1</strong><small>Letters &amp; Sounds · Aa</small></a>'
+      const units = Array.from({length: 8}, (_, i) => {
+        const label = level === 1 ? unitLetters[0][i] : 'Unit ' + (i + 1);
+        const link = level === 1 && i === 0
+          ? ' href="unit1-1.html"'
           : level === 1 && i === 1
-          ? '<a class="unit" href="unit1-2.html" style="display:block;text-decoration:none"><strong>Unit 2</strong><small>Letters &amp; Sounds · Dd</small></a>'
-          : '<div class="unit"><strong>Unit ' + (i + 1) + '</strong><small>Nội dung đang chuẩn bị</small></div>'
-      ).join('');
-      section.innerHTML = '<div class="level-head"><h2>🌟 Level ' + level + '</h2><span>8 Units</span></div><div class="units">' + units + '</div>';
+          ? ' href="unit1-2.html"'
+          : '';
+        const tag = link ? 'a' : 'div';
+        return '<' + tag + ' class="unit"' + link + (link ? ' style="display:block;text-decoration:none"' : '') + '><strong>' +
+          String(i + 1).padStart(2,'0') + ' · Unit ' + (i + 1) + '</strong><small>' + label + '</small></' + tag + '>';
+      }).join('');
+      section.innerHTML = '<div class="level-head"><div><h2>🌟 Level ' + level + '</h2><p style="color:#68758a;margin-top:3px">' + levelNames[level-1] + '</p></div><span>8 Units</span></div><div class="units">' + units + '</div>';
       root.appendChild(section);
     }
   </script>
