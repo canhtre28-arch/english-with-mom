@@ -57,8 +57,10 @@
       const section = document.createElement('section');
       section.className = 'level';
       const units = Array.from({length: 8}, (_, i) =>
-        i === 0 && level === 1
-          ? '<a class="unit" href="unit1-1.html" style="display:block;text-decoration:none"><strong>Unit ' + (i + 1) + '</strong><small>Letters &amp; Sounds · Aa</small></a>'
+        level === 1 && i === 0
+          ? '<a class="unit" href="unit1-1.html" style="display:block;text-decoration:none"><strong>Unit 1</strong><small>Letters &amp; Sounds · Aa</small></a>'
+          : level === 1 && i === 1
+          ? '<a class="unit" href="unit1-2.html" style="display:block;text-decoration:none"><strong>Unit 2</strong><small>Letters &amp; Sounds · Dd</small></a>'
           : '<div class="unit"><strong>Unit ' + (i + 1) + '</strong><small>Nội dung đang chuẩn bị</small></div>'
       ).join('');
       section.innerHTML = '<div class="level-head"><h2>🌟 Level ' + level + '</h2><span>8 Units</span></div><div class="units">' + units + '</div>';
